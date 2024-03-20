@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Designations.css'
+import './Designations.css';
 
 export default function Designations() {
 
@@ -20,10 +20,10 @@ export default function Designations() {
         } else if (temp === "cmo") {
             titleValue = "CMO";
             personValue = "Narasimha";
-        } else if (temp = "coo") {
+        } else if (temp === "coo") {
             titleValue = "COO";
             personValue = "William";
-        } else {
+        } else if(temp === "cao"){
             titleValue = "CAO";
             personValue = "Meghana";
         }
