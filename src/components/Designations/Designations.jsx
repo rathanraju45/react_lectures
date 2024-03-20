@@ -52,7 +52,7 @@ export default function Designations() {
                 <div id="designation_content">
                     <h1>{selected.title}</h1>
                     <h2>{selected.person}</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptates et accusamus maiores ipsum illum obcaecati quo qui, nisi odit!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ipsa, nisi dolor inventore quos sunt illo eaque ipsum est eligendi sint libero accusamus repudiandae voluptate consequuntur laudantium. Eos, reprehenderit unde.</p>
                 </div>
 
             </div>
