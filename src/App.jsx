@@ -1,6 +1,6 @@
 import Counter from "./components/Counter";
 import Todo from "./components/Todo";
-import EffectDemo from "./components/EffectDemo";
+import Notes from "./components/Notes/Notes";
 
 export default function App() {
     return (
@@ -8,7 +8,7 @@ export default function App() {
             {
                 // <Counter />
                 // <Todo />
-                <EffectDemo />
+                <Notes />
             }
         </div>
     );
