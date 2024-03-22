@@ -2,6 +2,7 @@ import Counter from "./components/Counter";
 import Todo from "./components/Todo";
 import Notes from "./components/Notes/Notes";
 import Designations from "./components/Designations/Designations";
+import Quiz from "./components/quiz/Quiz";
 
 export default function App() {
     return (
@@ -10,7 +11,8 @@ export default function App() {
                 // <Counter />
                 // <Todo />
                 // <Notes />
-                <Designations />
+                // <Designations />
+                <Quiz />
             }
         </div>
     );

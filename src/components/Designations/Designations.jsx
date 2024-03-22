@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Designations.css';
 
-export default function Designations() {
+export default function Designations() {  
 
     const [selected, setSelected] = useState({
         title: 'CEO',
