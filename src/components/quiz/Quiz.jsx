@@ -5,32 +5,33 @@ import data from './data';
 
 export default function Quiz() {
 
-  const [questions, setQuestions] = useState(null);
-  const [nofQuestions, setNofQuestions] = useState(0);
-  const [index, setIndex] = useState(null);
-  const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [currentQuestionObject, setCurrentQuestionObject] = useState(null);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    setQuestions(data);
-    setNofQuestions(data.length);
-    setIndex(0);
-    setCurrentQuestion(<Question question={data[0]} />);
+    setCurrentQuestionObject(data[index]);
   }, []);
 
-  function updateQuestion() {
-    setIndex(index + 1);
-    setCurrentQuestion(<Question question={data[index]} />);
-  }
+  useEffect(() => {
+    setCurrentQuestionObject(data[index])
+  }, [index])
 
   return (
-    <div className='quiz_container'>
-      <div id="current_question">
+    <div id='quiz_container'>
+      <div id="question_section">
         {
-          currentQuestion
+          currentQuestionObject && <Question question={currentQuestionObject} />
         }
-        <div id="next" onClick={() => updateQuestion()}>{
-          index === nofQuestions ? "Submit" : "Next"
-        }</div>
+      </div>
+      <div id="button_section">
+        {
+          index === 0 ? null : <div id="previous" onClick={() => setIndex(index - 1)}>Previous</div>
+        }
+        {
+          index === data.length - 1 ? <div id="submit">submit</div> : <div id="next" onClick={() => setIndex(index + 1)}> next</div>
+        }
+
+
       </div>
     </div>
   )
